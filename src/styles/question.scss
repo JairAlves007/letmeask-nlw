@@ -1,0 +1,184 @@
+.questions-list {
+   padding-bottom: 20px;
+   
+   .question {
+      background-color: #fefefe;
+      padding: 32px;
+      border-radius: 8px 8px 0 0;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+      z-index: 4;
+      margin-top: 16px;
+   
+      &.highlighted {
+         // background-color: #f4f0ff;
+         border: 1px solid #835afd;
+   
+         footer .user-info span {
+            color: #29292e;
+         }
+      }
+   
+      &.answered {
+         background-color: #dbdcdd;
+      }
+   
+      & + .question {
+         margin-top: 15px;
+      }
+   
+      p {
+         font-size: 'Poppns', sans-serif;
+         color: #29292e;
+      }
+   
+      footer {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-top: 24px;
+   
+         .user-info {
+            display: flex;
+            align-items: center;
+   
+            > img {
+               width: 32px;
+               height: 32px;
+               border-radius: 50%;
+            }
+   
+            span {
+               margin-left: 8px;
+               color: #737380;
+               font-size: 14px;
+               font-size: 'Poppins', sans-serif;
+            }
+         }
+   
+         > div {
+            display: flex;
+            gap: 16px;
+         }
+   
+         button {
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
+            transition: filter .2s;
+         
+            &:hover {
+               filter: brightness(0.7);
+            }
+         }
+   
+         .like-button {
+            display: flex;
+            align-items: flex-end;
+            color: #737380;
+            gap: 8px;
+            
+            &.liked {
+               color: #835afd;
+               
+               svg path {
+                  stroke: #835afd;
+                  fill: #835afd;
+               }
+            }
+         }
+      }
+   }
+}
+
+
+.form {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 1120px;
+   background-color: #fefefe;
+   padding: 32px;
+   border-radius: 0 0 8px 8px;
+   box-shadow: 12px 0 12px rgba(0, 0, 0, 0.04);
+   
+   input {
+      outline: none;
+      flex: 2;
+      border: 1px solid grey;
+      border-right: none;
+      border-radius: 8px 0 0 8px;
+      height: 40px;
+      padding-left: 12px;
+
+      &::placeholder {
+         color: #737380;
+         font: 500 16px 'Poppins', sans-serif;
+      }
+   }
+
+   button {
+      outline: none;
+      flex: 1;
+      height: 40px;
+      border: none;
+      border-radius: 0 8px 8px 0;
+      background-color: #835afd;
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+         filter: brightness(0.9);
+      }
+   }
+}
+
+.response {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: flex-start;
+   max-width: 1120px;
+   background-color: #fefefe;
+   padding: 32px;
+   border-radius: 0 0 8px 8px;
+   box-shadow: 12px 0 12px rgba(0, 0, 0, 0.04);
+
+   span {
+      margin-bottom: 14px;
+      font: 500 25px 'Roboto', sans-serif;
+   }
+
+   .content-response {
+      display: flex;
+      justify-content: space-between;
+      
+      width: 700px;
+
+      span:nth-child(1) {
+         font: 500 22px 'Poppins', sans-serif;
+      }
+
+      span:nth-child(2) {
+         font: 500 14px 'Roboto', sans-serif;
+      }
+   }
+
+   .user-response-info {
+      display: flex;
+      align-items: center;
+      margin-top: 16px;
+
+      > img {
+         width: 32px;
+         height: 32px;
+         border-radius: 50%;
+      }
+
+      span {
+         margin-left: 8px;
+         color: #737380;
+         font-size: 14px;
+         font-size: 'Poppins', sans-serif;
+      }
+   }
+}
